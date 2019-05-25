@@ -72,8 +72,8 @@ namespace AppParcial.ViewModels
         {
             if (String.IsNullOrEmpty(note))
             {
-                await App.Current.MainPage.DisplayAlert("Email empty",
-                                "Please enter your email",
+                await App.Current.MainPage.DisplayAlert("note empty",
+                                "Please enter your note",
                                 "Accept");
                 return;
             }
@@ -123,7 +123,6 @@ namespace AppParcial.ViewModels
             mainViewModel.Token = token.AccessToken;
             mainViewModel.TokenType = token.TokenType;
 
-            Application.Current.MainPage = new NavigationPage(new ProductPage());
             IsRunning = false;
             IsEnabled = true;
         }

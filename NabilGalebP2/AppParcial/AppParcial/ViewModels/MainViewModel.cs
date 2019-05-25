@@ -10,6 +10,11 @@ namespace AppParcial.ViewModels
 
     public class MainViewModel
     {
+        #region Properties
+        public string Token { get; set; }
+        public string TokenType { get; set; }
+        #endregion
+
         #region ViewModels
         public LoginViewModel Login { get; set; }
         #endregion

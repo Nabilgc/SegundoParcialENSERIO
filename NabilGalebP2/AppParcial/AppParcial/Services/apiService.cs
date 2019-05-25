@@ -30,7 +30,7 @@ namespace AppParcial.Services
             }
 
 
-            bool isReachable = VerifyConnectionURL("https://productosi220.azurewebsites.net/");
+            bool isReachable = VerifyConnectionURL("https://notesplc.azurewebsites.net/");
             if (!isReachable)
             {
                 return new Response
@@ -68,8 +68,7 @@ namespace AppParcial.Services
 
         public async Task<TokenResponse> GetToken(
             string urlBase,
-            string username,
-            string password)
+            string username)
         {
             try
             {
@@ -77,7 +76,7 @@ namespace AppParcial.Services
                 client.BaseAddress = new Uri(urlBase);
                 StringContent head = new StringContent(string.Format(
                     "grant_type=password&username={0}&password={1}",
-                    username, password),
+                    username),
                     Encoding.UTF8, "application/x-www-form-urlencoded");
                 HttpResponseMessage response = await client.PostAsync("Token", head);
                 var resultJSON = await response.Content.ReadAsStringAsync();

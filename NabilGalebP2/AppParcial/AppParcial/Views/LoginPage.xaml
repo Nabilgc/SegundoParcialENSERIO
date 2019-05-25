@@ -22,8 +22,8 @@
                     <Entry
                         Grid.Row="0"
                         Grid.Column="1"
-                        Text="{Binding Email,Mode=TwoWay}"
-                        Placeholder="Ingrese su Mail">
+                        Text="{Binding Note,Mode=TwoWay}"
+                        Placeholder="Ingrese su Nota">
                     </Entry>
                 </Grid>
                 <ActivityIndicator
